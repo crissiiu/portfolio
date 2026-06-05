@@ -1,4 +1,4 @@
-import { I18n } from '../core/i18n.js';
+import { I18n } from "../core/i18n.js";
 
 /**
  * Skill Card Component
@@ -6,14 +6,14 @@ import { I18n } from '../core/i18n.js';
  * @returns {string} - HTML string
  */
 export function createSkillCard({ image, title, skills }) {
-    const skillItems = skills.map((skill) => `<li>${skill}</li>`).join("");
-    const translatedTitle = I18n.t(title);
+  const skillItems = skills.map((skill) => `<li>${skill}</li>`).join("");
+  const translatedTitle = I18n.t(title);
 
-    return `
+  return `
         <div class="skill-card">
             <div class="skill-card__header">
                 <div class="skill-card__icon-wrapper">
-                    <img src="${image}" alt="${translatedTitle} icon" class="skill-card__icon">
+                    <img src="/assets/images/${image}" alt="${translatedTitle} icon" class="skill-card__icon">
                 </div>
                 <h3 class="skill-card__title">${translatedTitle}</h3>
             </div>

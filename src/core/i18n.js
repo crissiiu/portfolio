@@ -7,17 +7,29 @@ export class I18n {
      * Get a translated string by path (e.g., 'nav.home')
      */
     static t(path) {
-        const keys = path.split('.');
-        let result = translations[this.currentLang];
-        
-        for (const key of keys) {
-            if (result[key]) {
-                result = result[key];
-            } else {
-                return path; // Fallback to path if not found
-            }
+        if (!path) return '';
+
+        // Handle case where path is an object: { vi: '...', en: '...' }
+        if (typeof path === 'object' && path !== null) {
+            return path[this.currentLang] || path['en'] || path['vi'] || '';
         }
-        return result;
+
+        // Handle case where path is a string key: 'nav.home'
+        if (typeof path === 'string') {
+            const keys = path.split('.');
+            let result = translations[this.currentLang];
+            
+            for (const key of keys) {
+                if (result && result[key]) {
+                    result = result[key];
+                } else {
+                    return path; // Fallback to path if not found
+                }
+            }
+            return result;
+        }
+
+        return path;
     }
 
     /**

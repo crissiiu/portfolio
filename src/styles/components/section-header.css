@@ -1,0 +1,31 @@
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-lg);
+    justify-content: flex-start; /* Always left on desktop */
+    padding-left: var(--space-md); /* Cách phía bên trái một xíu */
+}
+
+.section-header__dot {
+    width: 12px;
+    height: 12px;
+    background-color: var(--primary-color); /* Màu primary */
+    border-radius: var(--radius-full);
+}
+
+.section-header__title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin: 0;
+}
+
+/* Responsive: Center on mobile */
+@media (max-width: 768px) {
+    .section-header {
+        justify-content: center;
+        text-align: center;
+        padding-left: 0;
+    }
+}

@@ -1,0 +1,34 @@
+/* about Section Styles */
+section {
+    margin-top: var(--space-xl);
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    justify-content: center;
+    text-align: center;
+}
+
+.about-container .section-header {
+    margin-bottom: var(--space-md);
+}
+
+.about-description {
+    padding: 0;
+    margin: 0;
+}
+
+
+.about-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: var(--space-sm);
+}
+
+/* Responsive: Center on mobile */
+@media (max-width: 768px) {
+    .about-container {
+        display: block;
+    }
+}

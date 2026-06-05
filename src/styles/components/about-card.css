@@ -1,0 +1,50 @@
+/* Skill Card Component Styles */
+
+.about-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--bg-accent);
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+    height: 100%;
+}
+
+.about-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color);
+}
+
+.about-card__icon-wrapper {
+    width: 48px;
+    height: 48px;
+    background-color: var(--bg-about-card);
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-xs);
+    border-radius: 50%;
+}
+
+.about-card__icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.about-card__title {
+    text-align: left;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.about-card__description {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+    font-size: 0.95rem;
+    gap: var(--space-xs);
+    transition: var(--transition-fast);
+}

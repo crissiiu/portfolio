@@ -1,7 +1,10 @@
 @import "./tokens.css";
 @import "./layouts/header.css";
 @import "./components/skill-card.css";
+@import "./components/about-card.css";
+@import "./components.css";
 @import "./sections/skills.css";
+@import "./sections/about.css";
 
 /* Reset & Base Styles */
 * {
@@ -22,10 +25,12 @@ body {
     background-color: var(--bg-primary);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    padding-top: 70px; /* Chiều cao của fixed header */
+    padding-top: 70px;
+    /* Chiều cao của fixed header */
 }
 
-img, svg {
+img,
+svg {
     display: block;
     max-width: 100%;
 }
@@ -36,7 +41,8 @@ a {
     transition: var(--transition-fast);
 }
 
-ul, ol {
+ul,
+ol {
     list-style: none;
 }
 
@@ -57,4 +63,10 @@ button {
 
 .section-padding {
     padding: var(--space-xl) 0;
+}
+
+#app {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-md);
 }
