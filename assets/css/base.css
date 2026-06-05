@@ -1,0 +1,13 @@
+/* CSS toàn cục */
+
+/* 
+ Reset/ Normalize CSS
+ Font
+ Màu sắc
+ Css Variables
+*/
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
