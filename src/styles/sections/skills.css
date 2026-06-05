@@ -1,0 +1,33 @@
+/* Skills Section Styles */
+
+.skills-container {
+    text-align: center;
+}
+
+.skills-container h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: var(--space-lg);
+    color: var(--text-main);
+    position: relative;
+    display: inline-block;
+}
+
+.skills-container h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: var(--primary-color);
+    border-radius: var(--radius-full);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-md);
+    margin-top: var(--space-xl);
+}
