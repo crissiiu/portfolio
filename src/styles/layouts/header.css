@@ -9,7 +9,7 @@
     background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--bg-accent);
-    height: 70px;
+    height: var(--header-height);
     display: flex;
     align-items: center;
     transition: var(--transition-normal);
@@ -125,7 +125,7 @@
 
     .site-nav {
         position: absolute;
-        top: 70px; /* Header height */
+        top: var(--header-height); /* Header height */
         left: 0;
         width: 100%;
         background: var(--bg-primary);

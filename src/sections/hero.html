@@ -1,18 +1,45 @@
-<section class="hero">
-    <div class="hero-container">
-        <p class="hero-greeting">Hello, I'm</p>
-        <h1 class="hero-name">Nguyen Thanh Sieu</h1>
-        <h2 class="hero-role">Software Engineer</h2>
-        <p class="hero-description">
-            I build clean, fast, and SE-friendly websites using mordern web standards.
+<div class="hero-container container">
+    <div class="hero-content">
+        <div class="hero-badge" data-i18n="hero.badge">Software Engineer</div>
+
+        <h1 class="hero-title">
+            <span data-i18n="hero.title_hi">Hi, I'm</span> <br>
+            <span class="text-primary" data-i18n="hero.name"></span>
+        </h1>
+
+        <p class="hero-description" data-i18n="hero.description">
+            I build fast, SEO-friendly websites and
+            web applications with clean architecture.
         </p>
+
         <div class="hero-actions">
-            <a href="#project" class="btn-primary">View Projects</a>
-            <a href="#contact" class="btn-secondary">Contact me</a>
+            <a href="#projects" class="btn btn-primary">
+                <img src="assets/images/project.png" alt=""
+                    style="width: 18px; height: 18px; filter: brightness(0) invert(1);">
+                <span data-i18n="hero.cta_projects">View Projects</span>
+            </a>
+            <a href="#contact" class="btn btn-outline">
+                <img src="assets/images/send.png" alt="" style="width: 18px; height: 18px;">
+                <span data-i18n="hero.cta_contact">Contact Me</span>
+            </a>
         </div>
 
-        <div class="hero-visual">
-            <img src="../../assets/images/logo.png" alt="Nguyen Thanh Sieu Avatar">
+        <div class="hero-socials">
+            <a href="https://github.com/crissiiu" target="_blank" aria-label="GitHub">
+                <img src="assets/images/github.png" alt="GitHub" class="social-icon">
+            </a>
+            <a href="https://linkedin.com/in/crissiiu" target="_blank" aria-label="LinkedIn">
+                <img src="assets/images/linkedin.png" alt="LinkedIn" class="social-icon">
+            </a>
+            <a href="mailto:nguyenthanhsieu.it@gmail.com" aria-label="Email">
+                <img src="assets/images/email.png" alt="Email" class="social-icon">
+            </a>
         </div>
     </div>
-</section>
+
+    <div class="hero-image-wrapper">
+        <div class="hero-circle-bg"></div>
+        <img src="assets/images/logo.png" alt="Nguyen Thanh Sieu" class="hero-avatar">
+        <div class="hero-dots"></div>
+    </div>
+</div>

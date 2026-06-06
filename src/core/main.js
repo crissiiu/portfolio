@@ -15,16 +15,15 @@ const APP_SECTIONS = [
   },
   { selector: "#footer", path: "./src/layouts/footer.html" },
   { selector: "#hero", path: "./src/sections/hero.html" },
-  { selector: "#about", path: "./src/sections/about.html" },
-  {
-    selector: "#skills",
-    path: "./src/sections/skills.html",
-    callback: initSkills,
-  },
   {
     selector: "#about",
     path: "./src/sections/about.html",
     callback: initAbout,
+  },
+  {
+    selector: "#skills",
+    path: "./src/sections/skills.html",
+    callback: initSkills,
   },
 ];
 

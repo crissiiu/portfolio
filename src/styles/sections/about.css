@@ -27,6 +27,12 @@ section {
     gap: var(--space-sm);
 }
 
+@media (min-width: 769px) {
+    .about-description {
+        padding: 0 var(--space-lg);
+    }
+}
+
 /* Responsive: Center on mobile */
 @media (max-width: 768px) {
     .about-container {
