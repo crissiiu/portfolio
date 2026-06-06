@@ -26,6 +26,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     padding-top: 70px;
+    overflow-x: hidden;
     /* Chiều cao của fixed header */
 }
 
@@ -66,7 +67,7 @@ button {
 }
 
 #app {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 var(--space-md);
 }

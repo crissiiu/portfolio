@@ -3,18 +3,23 @@
  */
 export const skillsData = [
   {
-    image: "code.png",
-    title: "skills.frontend",
-    skills: ["HTML5", "CSS3/SCSS", "Javascript (ES6+)", "Responsive Design"],
+    image: "code-skill.png",
+    title: "Frontend",
+    skills: ["HTML5", "CSS3 / SCSS", "JavaScript (ES6+)", "Responsive Design"],
   },
   {
     image: "servers.png",
-    title: "skills.backend",
-    skills: ["Node.js", "Express", "MongoDB", "RESTful API"],
+    title: "Backend",
+    skills: ["Node.js", "Express", "RESTful API", "Authentication"],
+  },
+  {
+    image: "database.png",
+    title: "Database",
+    skills: ["MongoDB", "MySQL", "SQL"],
   },
   {
     image: "tools.png",
-    title: "skills.tools",
-    skills: ["Git & GitHub", "Docker", "Agile/Scrum", "CI/CD"],
+    title: "Tools & Others",
+    skills: ["Git & GitHub", "VS Code", "Postman", "Automation Testing"],
   },
 ];
