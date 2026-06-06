@@ -5,6 +5,7 @@ import { Renderer } from "./renderer.js";
 import { I18n } from "./i18n.js";
 import { initSkills } from "../features/skills.js";
 import { initAbout } from "../features/about.js";
+import { initProject } from "../features/project.js";
 
 // Configuration for sections to load
 const APP_SECTIONS = [
@@ -24,6 +25,11 @@ const APP_SECTIONS = [
     selector: "#skills",
     path: "./src/sections/skills.html",
     callback: initSkills,
+  },
+  {
+    selector: "#projects",
+    path: "./src/sections/projects.html",
+    callback: initProject,
   },
 ];
 
@@ -65,6 +71,11 @@ function bindEvents() {
     btn.addEventListener("click", () => {
       const lang = btn.getAttribute("data-lang");
       I18n.setLanguage(lang);
+      
+      // Re-initialize dynamic sections
+      initProject();
+      initSkills();
+      initAbout();
     });
   });
 }

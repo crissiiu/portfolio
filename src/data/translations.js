@@ -14,6 +14,8 @@ export const translations = {
     sections: {
       skills_title: "Kỹ năng",
       about_title: "Giới thiệu",
+      projects_title: "Dự án nổi bật",
+      view_all_projects: "Xem tất cả dự án",
       hero_title: "Xin chào, tôi là Siêu",
       hero_subtitle: "Kỹ sư Phần mềm & Nhà phát triển Web",
     },
@@ -37,6 +39,10 @@ export const translations = {
       backend: "Phát triển Backend",
       tools: "Công cụ & Khác",
     },
+    pages: {
+      all_projects_title: "Tất cả dự án",
+      all_projects_subtitle: "Dưới đây là danh sách toàn bộ các dự án tôi đã tham gia phát triển.",
+    },
   },
   en: {
     nav: {
@@ -50,6 +56,8 @@ export const translations = {
     sections: {
       skills_title: "My Skills",
       about_title: "About Me",
+      projects_title: "Featured Projects",
+      view_all_projects: "View all projects",
       hero_title: "Hi, I'm Sieu",
       hero_subtitle: "Software Engineer & Web Developer",
     },
@@ -71,6 +79,10 @@ export const translations = {
       frontend: "Frontend Development",
       backend: "Backend Development",
       tools: "Tools & Others",
+    },
+    pages: {
+      all_projects_title: "All Projects",
+      all_projects_subtitle: "Here's a list of all the projects I've been involved in.",
     },
   },
 };

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tất cả dự án của Nguyễn Thanh Siêu - Software Engineer & Web Developer">
+
+    <title>Tất cả dự án | Nguyễn Thanh Siêu</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="src/styles/base.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico">
+    
+    <style>
+        .all-projects-page {
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+        .page-header {
+            margin-bottom: 48px;
+            text-align: center;
+        }
+        .page-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 16px;
+        }
+        .page-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .back-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 32px;
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+        .back-home:hover {
+            gap: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header"></header>
+
+    <main id="app" class="all-projects-page">
+        <div class="container">
+            <a href="/" class="back-home">
+                <span>←</span> Quay lại trang chủ
+            </a>
+            
+            <div class="page-header">
+                <h1 class="page-title" data-i18n="pages.all_projects_title">Tất cả dự án</h1>
+                <p class="page-subtitle" data-i18n="pages.all_projects_subtitle">Dưới đây là một số dự án tiêu biểu mà tôi đã thực hiện.</p>
+            </div>
+
+            <div id="projects-list" class="projects-grid">
+                <!-- Projects will be loaded here -->
+            </div>
+
+            <div id="pagination" class="pagination">
+                <!-- Pagination buttons will be loaded here -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Main Entry Point -->
+    <script type="module" src="src/core/all-projects.js"></script>
+</body>
+
+</html>
