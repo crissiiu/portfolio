@@ -1,0 +1,202 @@
+/* ===================================
+   Experience Section
+=================================== */
+#experience {
+    margin-top: var(--space-xl);
+}
+
+.experience-container {
+    overflow: hidden;
+}
+
+/* Wrapper handles overflow + relative positioning for the line */
+.experience-list-wrapper {
+    position: relative;
+    overflow-x: auto;
+    /* Always show scrollbar so users know it's scrollable */
+    scrollbar-width: auto;
+    scrollbar-color: var(--text-light) var(--bg-accent);
+    padding-bottom: 8px;
+}
+
+.experience-list-wrapper::-webkit-scrollbar {
+    height: 10px;
+}
+
+.experience-list-wrapper::-webkit-scrollbar-track {
+    background: var(--bg-accent);
+    border-radius: var(--radius-full);
+    margin: 0 var(--space-sm);
+}
+
+.experience-list-wrapper::-webkit-scrollbar-thumb {
+    background-color: var(--text-light);
+    border-radius: var(--radius-full);
+    border: 2px solid var(--bg-accent);
+}
+
+/*
+  The key trick: the line is position:absolute inside the wrapper,
+  which itself scrolls. So the line scrolls together with the items,
+  stretching full content width automatically.
+*/
+.experience-timeline-line {
+    position: absolute;
+    top: 36px; /* Centered on the dot row */
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: var(--border-color);
+    z-index: 1;
+}
+
+/* Items are flex row inside the wrapper */
+.experience-list {
+    display: flex;
+    gap: 0;
+    position: relative;
+    z-index: 2;
+    justify-content: safe center;
+}
+
+/* ---- Individual item ---- */
+.experience-item {
+    flex: 0 0 380px;
+    display: flex;
+    flex-direction: column;
+    padding-right: var(--space-xl);
+}
+
+/* Milestone row: dot sits on the line */
+.experience-item__milestone {
+    height: 72px;        /* Total row height = line-top(36px) + dot-radius(7px) + space below */
+    position: relative;
+}
+
+.experience-item__dot {
+    position: absolute;
+    top: 30px;           /* 36px line-top - 6px radius = 30px → dot center aligns with line */
+    left: 32px;          /* 64px icon-width / 2 → dot center aligns with icon center */
+    transform: translateX(-50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--bg-primary);
+    border: 3px solid var(--border-color);
+    z-index: 3;
+}
+
+/* Highlight first (most recent) dot */
+.experience-item:first-child .experience-item__dot {
+    border-color: var(--primary-color);
+    background-color: var(--primary-color);
+}
+
+/* Content: icon circle on left, text on right */
+.experience-item__container {
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Circular icon with var(--text-light) background */
+.experience-item__icon-wrapper {
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: var(--bg-accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.experience-item__logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.experience-item__icon-fallback {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+}
+
+/* Text block */
+.experience-item__info {
+    display: flex;
+    flex-direction: column;
+}
+
+.experience-item__period {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 4px;
+}
+
+.experience-item__role {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 2px;
+}
+
+.experience-item__company {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-main);
+    margin-bottom: 8px;
+}
+
+.experience-item__description {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.55;
+}
+
+/* ===================================
+   Responsive
+=================================== */
+@media (max-width: 768px) {
+    /* Hide the horizontal timeline */
+    .experience-timeline-line {
+        display: none;
+    }
+
+    .experience-list-wrapper {
+        overflow-x: hidden;
+    }
+
+    .experience-list {
+        flex-direction: column;
+        gap: var(--space-lg);
+    }
+
+    .experience-item {
+        flex: 1;
+        padding-right: 0;
+        padding-left: var(--space-lg);
+        border-left: 2px solid var(--border-color);
+    }
+
+    .experience-item:first-child {
+        border-left-color: var(--primary-color);
+    }
+
+    .experience-item__milestone {
+        display: none;
+    }
+
+    .experience-item__icon-wrapper {
+        width: 52px;
+        height: 52px;
+    }
+
+    .experience-item__logo {
+        width: 32px;
+        height: 32px;
+    }
+}

@@ -6,6 +6,7 @@ import { I18n } from "./i18n.js";
 import { initSkills } from "../features/skills.js";
 import { initAbout } from "../features/about.js";
 import { initProject } from "../features/project.js";
+import { initExperience } from "../features/experience.js";
 
 // Configuration for sections to load
 const APP_SECTIONS = [
@@ -25,6 +26,11 @@ const APP_SECTIONS = [
     selector: "#skills",
     path: "./src/sections/skills.html",
     callback: initSkills,
+  },
+  {
+    selector: "#experience",
+    path: "./src/sections/experience.html",
+    callback: initExperience,
   },
   {
     selector: "#projects",
@@ -76,6 +82,7 @@ function bindEvents() {
       initProject();
       initSkills();
       initAbout();
+      initExperience();
     });
   });
 }

@@ -8,6 +8,7 @@
 @import "./sections/hero.css";
 @import "./sections/skills.css";
 @import "./sections/about.css";
+@import "./sections/experience.css";
 
 /* Reset & Base Styles */
 * {

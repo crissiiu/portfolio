@@ -64,6 +64,7 @@ export const translations = {
     hero: {
       badge: "Software Engineer",
       title_hi: "Hi, I'm",
+      name: "Nguyen Thanh Sieu",
       description:
         "I build fast, SEO-friendly websites and web applications with clean architecture.",
       cta_projects: "View Projects",

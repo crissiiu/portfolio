@@ -11,7 +11,6 @@ section {
     padding-left: calc(50vw - 50%);
     padding-right: calc(50vw - 50%);
     padding-top: var(--space-xl);
-    padding-bottom: var(--space-xl);
 }
 
 .skills-grid {
